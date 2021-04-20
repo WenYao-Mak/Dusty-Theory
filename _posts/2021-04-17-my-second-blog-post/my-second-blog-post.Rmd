@@ -1,9 +1,9 @@
 ---
-title: "My second blog post"
+title: "Calculate Age from Dates"
 description: |
   A short description of the post.
 author:
-  - name: Nora Jones
+  - name: WenYao Mak
     url: https://example.com/norajones
 date: 04-17-2021
 output:
