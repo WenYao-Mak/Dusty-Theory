@@ -1,0 +1,22 @@
+---
+title: "Survival Analysis"
+description: |
+  A comprehensive note to survival analysis in peritoneal dialysis
+author:
+  - name: WenYao, Mak 
+    url: https://www.linkedin.com/in/mak-wen-yao-51148154/
+date: 05-04-2021
+output:
+  distill::distill_article:
+    self_contained: false
+    toc: true
+    toc_float: true
+    number_sections: true
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
