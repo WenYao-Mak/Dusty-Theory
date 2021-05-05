@@ -1,10 +1,15 @@
 ---
-title: "My second blog post"
+title: "Calculate Age from Dates"
 description: |
   A short description of the post.
 author:
+<<<<<<< HEAD
   - name: WenYao Mak 
     url: https://www.linkedin.com/in/mak-wen-yao-51148154/
+=======
+  - name: WenYao Mak
+    url: https://example.com/norajones
+>>>>>>> ee18b958606f980d965e2fe31d73e77d72bb3866
 date: 04-17-2021
 output:
   distill::distill_article:
