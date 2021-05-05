@@ -2,7 +2,7 @@
   {
     "path": "posts/2021-05-04-survival-analysis/",
     "title": "Survival Analysis",
-    "description": "A comprehensive note to survival analysis in peritoneal dialysis",
+    "description": "This is a note to myself on survival analysis. You are welcome to use the information.",
     "author": [
       {
         "name": "WenYao, Mak",
@@ -11,9 +11,9 @@
     ],
     "date": "2021-05-04",
     "categories": [],
-    "contents": "\r\n\r\n\r\n\r\n",
+    "contents": "\r\n\r\nContents\r\nComprehensive Survival Analysis in R\r\nPart 1: Survival vs Hazard Functions\r\n\r\nComprehensive Survival Analysis in R\r\nThe article introduces different analysis methods for time-to-event data, and how to conduct these analyses using R.\r\nPart 1: Survival vs Hazard Functions\r\n\r\n\r\n\r\n",
     "preview": {},
-    "last_modified": "2021-05-05T08:56:15+08:00",
+    "last_modified": "2021-05-05T10:44:35+08:00",
     "input_file": "survival-analysis.utf8.md"
   },
   {

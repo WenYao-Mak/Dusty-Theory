@@ -1,7 +1,7 @@
 ---
 title: "Survival Analysis"
 description: |
-  A comprehensive note to survival analysis in peritoneal dialysis
+  This is a note to myself on survival analysis. You are welcome to use the information. 
 author:
   - name: WenYao, Mak 
     url: https://www.linkedin.com/in/mak-wen-yao-51148154/
@@ -18,5 +18,11 @@ output:
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
+
+# Comprehensive Survival Analysis in R
+
+The article introduces different analysis methods for time-to-event data, and how to conduct these analyses using R. 
+
+# Part 1: Survival vs Hazard Functions 
 
 
