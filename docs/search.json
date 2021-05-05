@@ -2,18 +2,18 @@
   "articles": [
     {
       "path": "about.html",
-      "title": "About this blog",
-      "description": "Some additional details about the blog",
+      "title": "About this note",
+      "description": "Some additional details about the sites",
       "author": [],
       "contents": "\r\n\r\n\r\n\r\n",
-      "last_modified": "2021-05-05T08:28:12+08:00"
+      "last_modified": "2021-05-05T10:45:32+08:00"
     },
     {
       "path": "index.html",
       "title": "My Blog",
       "author": [],
       "contents": "\r\n\r\n\r\n\r\n",
-      "last_modified": "2021-05-05T08:28:12+08:00"
+      "last_modified": "2021-05-05T10:44:36+08:00"
     }
   ],
   "collections": ["posts/posts.json"]

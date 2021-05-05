@@ -13,8 +13,8 @@
     "categories": [],
     "contents": "\r\n\r\nContents\r\nComprehensive Survival Analysis in R\r\nPart 1: Survival vs Hazard Functions\r\n\r\nComprehensive Survival Analysis in R\r\nThe article introduces different analysis methods for time-to-event data, and how to conduct these analyses using R.\r\nPart 1: Survival vs Hazard Functions\r\n\r\n\r\n\r\n",
     "preview": {},
-    "last_modified": "2021-05-05T10:44:35+08:00",
-    "input_file": "survival-analysis.utf8.md"
+    "last_modified": "2021-05-05T10:44:36+08:00",
+    "input_file": {}
   },
   {
     "path": "posts/welcome/",
