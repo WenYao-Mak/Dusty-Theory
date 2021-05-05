@@ -116,7 +116,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <!--/radix_placeholder_rmarkdown_metadata-->
   
   <script type="text/json" id="radix-resource-manifest">
-  {"type":"character","attributes":{},"value":["survival-analysis_files/anchor-4.2.2/anchor.min.js","survival-analysis_files/bowser-1.9.3/bowser.min.js","survival-analysis_files/distill-2.2.21/template.v2.js","survival-analysis_files/header-attrs-2.7/header-attrs.js","survival-analysis_files/jquery-1.11.3/jquery.min.js","survival-analysis_files/popper-2.6.0/popper.min.js","survival-analysis_files/tippy-6.2.7/tippy-bundle.umd.min.js","survival-analysis_files/tippy-6.2.7/tippy-light-border.css","survival-analysis_files/tippy-6.2.7/tippy.css","survival-analysis_files/tippy-6.2.7/tippy.umd.min.js","survival-analysis_files/webcomponents-2.0.0/webcomponents.js"]}
+  {"type":"character","attributes":{},"value":["survival-analysis_files/anchor-4.2.2/anchor.min.js","survival-analysis_files/bowser-1.9.3/bowser.min.js","survival-analysis_files/distill-2.2.21/template.v2.js","survival-analysis_files/figure-html5/unnamed-chunk-1-1.png","survival-analysis_files/header-attrs-2.7/header-attrs.js","survival-analysis_files/jquery-1.11.3/jquery.min.js","survival-analysis_files/popper-2.6.0/popper.min.js","survival-analysis_files/tippy-6.2.7/tippy-bundle.umd.min.js","survival-analysis_files/tippy-6.2.7/tippy-light-border.css","survival-analysis_files/tippy-6.2.7/tippy.css","survival-analysis_files/tippy-6.2.7/tippy.umd.min.js","survival-analysis_files/webcomponents-2.0.0/webcomponents.js"]}
   </script>
   <!--radix_placeholder_navigation_in_header-->
   <!--/radix_placeholder_navigation_in_header-->
@@ -1483,14 +1483,31 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <h3>Contents</h3>
 <ul>
 <li><a href="#comprehensive-survival-analysis-in-r">Comprehensive Survival Analysis in R</a></li>
-<li><a href="#part-1-survival-vs-hazard-functions">Part 1: Survival vs Hazard Functions</a></li>
+<li><a href="#part-1-survival-vs-hazard-functions-probabilities">Part 1: Survival vs Hazard Functions (Probabilities)</a>
+<ul>
+<li><a href="#graphical-representation-of-the-survival-function">Graphical representation of the survival function</a></li>
+</ul></li>
 </ul>
 </nav>
 </div>
 <h1 id="comprehensive-survival-analysis-in-r">Comprehensive Survival Analysis in R</h1>
 <p>The article introduces different analysis methods for time-to-event data, and how to conduct these analyses using R.</p>
-<h1 id="part-1-survival-vs-hazard-functions">Part 1: Survival vs Hazard Functions</h1>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<p>My current research interest revolves around peritoneal dialysis and related issues, so examples will be illustrated using data in this field.</p>
+<h1 id="part-1-survival-vs-hazard-functions-probabilities">Part 1: Survival vs Hazard Functions (Probabilities)</h1>
+<p>We often are interested in how long a person can undergo peritoneal dialysis (PD) without suffering infections to their peritoneum (which causes inflamation, i.e. peritonitis).</p>
+<p>The probability that a person can stay peritonitis-free, or <em>survive</em> the time from the start of PD treatment to a specific time <em>t</em> in the future, is the <em>survival probability</em>. This is represented by the <em>survivor function</em> <strong>S(t)</strong>, as below:</p>
+<p><span class="math display">\[S(t)=Pr(T&gt;t)\]</span> The function indicates the population probability of surviving beyond time <em>t</em>.</p>
+<h2 id="graphical-representation-of-the-survival-function">Graphical representation of the survival function</h2>
+<p>The survival function can be depicted as a <em>survival curve</em>. This is more intuitive to understand the probability of surviving (or in our case, remain peritonitis-free) beyond a certain time <em>t</em>.</p>
+<div class="layout-chunk" data-layout="l-body">
+<pre><code>Call: survfit(formula = Surv(time, event) ~ sex, data = kaplan)
+
+       n events median 0.95LCL 0.95UCL
+sex=1 10      3    493     254      NA
+sex=2 10      1     NA      NA      NA</code></pre>
+<p><img src="survival-analysis_files/figure-html5/unnamed-chunk-1-1.png" width="624" /></p>
+</div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>
@@ -1498,6 +1515,15 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <div class="d-appendix">
 </div>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 
 <!--radix_placeholder_site_after_body-->
 <!--/radix_placeholder_site_after_body-->
