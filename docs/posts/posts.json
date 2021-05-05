@@ -13,7 +13,7 @@
     "categories": [],
     "contents": "\r\n\r\n\r\n\r\n",
     "preview": {},
-    "last_modified": "2021-05-05T08:46:53+08:00",
+    "last_modified": "2021-05-05T08:56:15+08:00",
     "input_file": "survival-analysis.utf8.md"
   },
   {
@@ -32,22 +32,5 @@
     "preview": {},
     "last_modified": "2021-04-17T15:50:12+08:00",
     "input_file": {}
-  },
-  {
-    "path": "posts/2021-04-17-my-second-blog-post/",
-    "title": "My second blog post",
-    "description": "A short description of the post.",
-    "author": [
-      {
-        "name": "Nora Jones",
-        "url": "https://example.com/norajones"
-      }
-    ],
-    "date": "2021-04-17",
-    "categories": [],
-    "contents": "\r\nDistill is a publication format for scientific and technical writing, native to the web.\r\nLearn more about using Distill at https://rstudio.github.io/distill.\r\nI dont know if this will work but if it does i will be very very happy\r\n\r\n\r\n\r\n",
-    "preview": {},
-    "last_modified": "2021-04-17T16:29:04+08:00",
-    "input_file": "my-second-blog-post.utf8.md"
   }
 ]
