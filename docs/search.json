@@ -10,10 +10,10 @@
     },
     {
       "path": "index.html",
-      "title": "My Blog",
+      "title": "My Notes",
       "author": [],
       "contents": "\r\n\r\n\r\n\r\n",
-      "last_modified": "2021-05-05T10:44:36+08:00"
+      "last_modified": "2021-05-05T10:46:24+08:00"
     }
   ],
   "collections": ["posts/posts.json"]
