@@ -55,13 +55,13 @@ print(fit)
 
 ggsurvplot(fit,
           pval = TRUE, conf.int = TRUE,
-          risk.table = TRUE, 
-          risk.table.col = "strata", 
+          risk.table = FALSE, 
+          #risk.table.col = "strata", 
           linetype = "strata",
           surv.median.line = "hv",
           ggtheme = theme_bw(), 
-          tables.height = 0.3,
-          surv.plot.height=0.9, 
+          #tables.height = 0.3,
+          #surv.plot.height=0.9, 
           fontsize=4)
 ```
 
