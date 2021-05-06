@@ -1,7 +1,7 @@
 ---
 title: "About this note"
 description: |
-  Some additional details about the sites
+  Welcome to my blog! My passion is to use data science to understand the world. 
 ---
 
 ```{r setup, include=FALSE}
