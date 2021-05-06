@@ -60,6 +60,7 @@ ggsurvplot(fit,
           linetype = "strata",
           surv.median.line = "hv",
           ggtheme = theme_bw(), 
-          tables.height = 0.3)
+          tables.height = 0.3,
+          surv.plot.height=0.9)
 ```
 
