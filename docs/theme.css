@@ -15,7 +15,7 @@
 
 html {
   /*-- Main font sizes --*/
-  --title-size:      150px;
+  --title-size:      50px;
   --body-size:       1.06rem;
   --code-size:       14px;
   --aside-size:      12px;
@@ -43,7 +43,7 @@ d-byline {
 
 /*-- ARTICLE TABLE OF CONTENTS --*/
 .d-contents {
-  --heading-size:    18px;
+  --heading-size:    28px;
   --contents-size:   13px;
 }
 
