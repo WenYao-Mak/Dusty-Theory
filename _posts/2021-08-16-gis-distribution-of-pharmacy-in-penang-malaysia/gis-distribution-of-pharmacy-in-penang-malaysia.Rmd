@@ -1,0 +1,63 @@
+---
+title: "GIS: Distribution of Pharmacy in Penang, Malaysia"
+description: |
+  A short description of the post.
+author:
+  - name: WenYao, Mak
+    url: https://www.linkedin.com/in/mak-wen-yao-51148154/
+date: 08-16-2021
+output:
+  distill::distill_article:
+    self_contained: false
+    toc: true
+    toc_float: true
+    toc_depth: 6
+    number_sections: true
+theme: theme.css
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+# Visualising Pharmacy Locations with R: A Fun Project 
+
+## 
+```{r}
+
+library(tm)
+library(data.table)
+library(stringi)
+library(wordcloud)
+
+library(ggmap)
+library(tidygeocoder)
+library(dplyr)
+library(tibble)
+
+library(expss)
+library(lattice)
+library(sp)
+library(leafpop)
+
+library(sf)
+library(mapview)
+library(leaflet)
+library(tidyverse)
+library(magrittr)
+library(leafem)
+library(ggplot2)
+library(RColorBrewer)
+
+lat_longs3<-read.csv("penang.csv")
+
+pg_sf <- st_as_sf(lat_longs3, coords = c("longitude", "latitude"), crs=4326)
+
+
+#Mapping 
+mapviewOptions(fgb = FALSE)
+pg_pharm <-mapview(pg_sf, zcol=c("Nama.Premis"), legend=FALSE, layer.name = "Retail & Wholesale Pharmacies in Penang", col.regions=brewer.pal(9, "Reds"))
+
+pg_pharm
+
+```

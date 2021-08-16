@@ -1,0 +1,87 @@
+---
+title: "pharm_GIS"
+author: "Mak Wen Yao"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output:
+  bookdown::html_document2
+fontsize: 12pt
+header-includes:
+- \usepackage{booktabs}
+- \usepackage{longtable}
+- \usepackage{array}
+- \usepackage{multirow}
+- \usepackage{xcolor}
+- \usepackage{wrapfig}
+- \usepackage{float}
+- \usepackage{colortbl}
+- \usepackage{pdflscape}
+- \usepackage{tabu}
+- \usepackage{threeparttable}
+- \usepackage[normalem]{ulem}
+mainfont: Arial
+classoption: a4paper
+---
+
+```{r pharm, eval=T, warning=F, message=F, echo=F, results=T}
+library(tm)
+library(data.table)
+library(stringi)
+library(wordcloud)
+
+library(ggmap)
+library(tidygeocoder)
+library(dplyr)
+library(tibble)
+
+library(expss)
+library(lattice)
+library(sp)
+library(leafpop)
+
+library(sf)
+library(mapview)
+library(leaflet)
+library(tidyverse)
+library(magrittr)
+library(leafem)
+library(ggplot2)
+library(RColorBrewer)
+
+PG <- read.csv("PGpharm.csv")
+
+#convert address to lat-long 
+lat_longs3 <- PG %>%
+  geocode(Alamat.Premis, method="cascade", cascade_order=c("osm","google"), lat=latitude, long=longitude)
+
+which(is.na(lat_longs3$latitude)) #six coordinates missing 125,157,358,531,542,577
+#125, Eco Pharmacy, 5.4331713626236, 100.3862905024836 
+#157, Farmasi Bagan, 5.364318099813012, 100.4456890530908 
+#358, Usains Biomics Lab, 5.35456786695057, 100.30337901642542
+#531, Mega Kulim, 5.398429571521228, 100.3291190999708 
+#542, Mega Kulim, 5.398429571521228, 100.3291190999708 (as #531)
+#577, Siang Pharmacy, 5.332345539095499, 100.48103584306592 
+
+lat_longs3$latitude[which(lat_longs3$Bil.==125)]<- as.numeric( 5.4331713626236)
+lat_longs3$latitude[which(lat_longs3$Bil.==157)]<- as.numeric( 5.364318099813012)
+lat_longs3$latitude[which(lat_longs3$Bil.==358)]<- as.numeric( 5.35456786695057)
+lat_longs3$latitude[which(lat_longs3$Bil.==531)]<- as.numeric( 5.4331713626236)
+lat_longs3$latitude[which(lat_longs3$Bil.==542)]<- as.numeric( 5.4331713626236)
+lat_longs3$latitude[which(lat_longs3$Bil.==577)]<- as.numeric( 5.4331713626236)
+
+lat_longs3$longitude[which(lat_longs3$Bil.==125)]<- as.numeric( 100.3862905024836)
+lat_longs3$longitude[which(lat_longs3$Bil.==157)]<- as.numeric( 100.4456890530908)
+lat_longs3$longitude[which(lat_longs3$Bil.==358)]<- as.numeric( 100.30337901642542)
+lat_longs3$longitude[which(lat_longs3$Bil.==531)]<- as.numeric( 100.3291190999708)
+lat_longs3$longitude[which(lat_longs3$Bil.==542)]<- as.numeric( 100.3291190999708)
+lat_longs3$longitude[which(lat_longs3$Bil.==577)]<- as.numeric( 100.48103584306592)
+
+write.csv(lat_longs3, "penang.csv")
+
+pg_sf <- st_as_sf(lat_longs3, coords = c("longitude", "latitude"), crs=4326)
+
+#Mapping 
+mapviewOptions(fgb = FALSE)
+pg_pharm <-mapview(pg_sf, zcol=c("Nama.Premis"), legend=FALSE, layer.name = "Retail & Wholesale Pharmacies in Penang", col.regions=brewer.pal(9, "Reds"))
+
+pg_pharm
+
