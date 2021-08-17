@@ -1,7 +1,7 @@
 ---
 title: "GIS: Distribution of Pharmacy in Penang, Malaysia"
 description: |
-  A short description of the post.
+  How to use R to visualise places of interest (work in progress)
 author:
   - name: WenYao, Mak
     url: https://www.linkedin.com/in/mak-wen-yao-51148154/
@@ -20,10 +20,92 @@ theme: theme.css
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-# Visualising Pharmacy Locations with R: A Fun Project 
+# Visualising Pharmacy Locations with R
 
-## 
-```{r}
+*This is a side-project where new information will be continuously added* 
+
+The motivation behind this project is that I wanted to visualise how competitive is in the retail pharmacy sector, especially in Penang. 
+
+This project utilises open-source data published on the *Official Portal of Pharmaceutical Services Programme Register of Licenses*, available [here](https://www.pharmacy.gov.my/v2/en/information/register-licences.html). 
+
+Disclaimer: To err is human. If you find any mistakes on this post please kindly let me know. You can reach me via: 
+
+# Data Collection 
+
+Information of all registered pharmacies (retail or wholesale) is manually collected from the website, filtering for License A (pharmacist license) in Penang state only. A total of 602 entries were collected. Among the important variables that I needed were (1) Name of the premise, (2) Address, and (3) Type of the business (retail, wholesale, or both).  
+
+As the file size is quite small, the `.csv`{.R} sheet is read via the `read.csv()`{.R} wrapper function. The data frame is given a name "PG" via
+
+```{r data, eval=TRUE, cache=FALSE, warning=FALSE, message=FALSE, echo=TRUE}
+PG <- read.csv("PGpharm.csv")
+```
+
+Displaying the column names suggests that the information is sufficient for what I want to do here. (Note: the column names were written in Malay where 'Nama.Premis'='Premise Name' and 'Alamat.Premis'='Premise Address') 
+
+```{r, eval=TRUE, cache=FALSE, warning=FALSE, message=FALSE, echo=TRUE}
+colnames(PG)
+```
+
+Since the data is published by an official government portal, there should be no missing data but it doesn't hurt to check. 
+
+```{r, eval=TRUE, cache=FALSE, warning=FALSE, message=FALSE, echo=TRUE}
+which(is.na(PG$Nama.Premis))
+which(is.na(PG$Alamat.Premis))
+```
+
+Once data completeness has been confirmed, I can move on to prepare the data for mapping. 
+
+# GIS package in R 
+
+I am mainly using the `mapview()`{.R} [package](https://r-spatial.github.io/mapview/) and `ggmap()` [package](https://www.rdocumentation.org/packages/ggmap/versions/2.6.1)
+
+The first step is to convert the the address to latitude and longtidue. This is done by using the `geocode()` function. 
+
+Note that geocoding requires tools that may not be free. Most notably is the [Google Maps API](https://developers.google.com/maps/gmp-get-started) that requires an account on the Google Cloud Platform in order to work. I am using a mixed of the public API by [OpenStreetMap](https://www.openstreetmap.org/#map=6/4.116/109.455) called [Nominatim](http://nominatim.org/release-docs/latest/api/Overview/) and Google Maps API. 
+
+The following codes are used to convert addresses to latitude and longitude. I used `cascade_oder=c("osm","google")` to order first geocoding services with Nominatim followed by Google Maps service.  
+
+```{r, eval=FALSE, cache=FALSE, warning=FALSE, message=FALSE, echo=TRUE,tidy=TRUE, tidy.opts=list(width.cutoff=60)}
+library(ggmap)
+
+lat_longs3 <- PG %>%
+  geocode(Alamat.Premis, method="cascade", cascade_order=c("osm","google"), lat=latitude, long=longitude)
+```
+
+Sometimes the geocoding process will fail to produce any coordinates and subsequent mapping cannot proceed. In this case, the coordinates will be manually identified and filled. 
+
+# Mapping pharmacies 
+
+As the coordinates of the pharmacies are complete now, I can proceed to map their locations for subsequent analysis. 
+
+```{r, cache=TRUE, warning=FALSE, message=FALSE, echo=FALSE}
+lat_longs3<-read.csv("penang.csv")
+```
+
+The next step is to convert the coordinates into sf objects with `st_as_sf()` command (of the `sf()` package)
+
+```{r, eval=TRUE, cache=FALSE, warning=FALSE, message=FALSE, echo=TRUE}
+library(sf)
+
+pg_sf <- st_as_sf(lat_longs3, coords = c("longitude", "latitude"), crs=4326)
+```
+
+To map these pharmacies, the package `mapview()` will be needed. I opted to use the colour palette from the package `RColorBrewer`.
+
+```{r, eval=TRUE, cache=FALSE, warning=FALSE, message=FALSE, echo=TRUE, tidy=TRUE, tidy.opts=list(width.cutoff=60)}
+library(mapview)
+library(RColorBrewer)
+
+pg_pharm <-mapview(pg_sf, zcol=c("Nama.Premis"), legend=FALSE, layer.name = "Retail & Wholesale Pharmacies in Penang", col.regions=brewer.pal(9, "Reds"))
+```
+
+The distribution of all retail & wholesale pharmacies in Penang state is shown below. Each colour dot represents a pharmacy. 
+
+```{r, eval=TRUE, cache=FALSE, warning=FALSE, message=FALSE, echo=FALSE, tidy=TRUE, tidy.opts=list(width.cutoff=60)}
+pg_pharm
+```
+
+```{r, eval=FALSE, cache=TRUE}
 
 library(tm)
 library(data.table)
@@ -56,8 +138,13 @@ pg_sf <- st_as_sf(lat_longs3, coords = c("longitude", "latitude"), crs=4326)
 
 #Mapping 
 mapviewOptions(fgb = FALSE)
+my <-readRDS("gadm36_MYS_2_sf.rds", refhook = NULL)
+MY <- mapview(my, legend=FALSE, layer.name="MY")
+
 pg_pharm <-mapview(pg_sf, zcol=c("Nama.Premis"), legend=FALSE, layer.name = "Retail & Wholesale Pharmacies in Penang", col.regions=brewer.pal(9, "Reds"))
 
-pg_pharm
+map<- pg_pharm+MY
+
+map
 
 ```

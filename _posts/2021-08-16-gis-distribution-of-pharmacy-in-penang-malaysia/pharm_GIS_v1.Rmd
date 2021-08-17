@@ -80,8 +80,9 @@ write.csv(lat_longs3, "penang.csv")
 pg_sf <- st_as_sf(lat_longs3, coords = c("longitude", "latitude"), crs=4326)
 
 #Mapping 
-mapviewOptions(fgb = FALSE)
+mapviewOptions(fgb = TRUE)
 pg_pharm <-mapview(pg_sf, zcol=c("Nama.Premis"), legend=FALSE, layer.name = "Retail & Wholesale Pharmacies in Penang", col.regions=brewer.pal(9, "Reds"))
 
 pg_pharm
+
 
