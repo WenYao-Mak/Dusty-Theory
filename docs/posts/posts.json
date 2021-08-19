@@ -1,5 +1,22 @@
 [
   {
+    "path": "posts/2021-08-19-competing-risk-approach-to-peritonitis-in-malaysia/",
+    "title": "Competing risk approach to peritonitis in Malaysia",
+    "description": "Survival analysis beyond Kaplan-Meier",
+    "author": [
+      {
+        "name": "WenYao, Mak",
+        "url": "https://www.linkedin.com/in/mak-wen-yao-51148154/"
+      }
+    ],
+    "date": "2021-08-19",
+    "categories": [],
+    "contents": "\r\nScientific poster on competiting risk analysis\r\n\r\n\r\n\r\nFigure 1: Some cool caption\r\n\r\n\r\n\r\n\r\n\r\n\r\n",
+    "preview": "posts/2021-08-19-competing-risk-approach-to-peritonitis-in-malaysia/0001.jpg",
+    "last_modified": "2021-08-19T13:55:34+08:00",
+    "input_file": "competing-risk-approach-to-peritonitis-in-malaysia.knit.md"
+  },
+  {
     "path": "posts/2021-08-16-gis-distribution-of-pharmacy-in-penang-malaysia/",
     "title": "GIS: Distribution of Pharmacy in Penang, Malaysia",
     "description": "How to use R to visualise places of interest (work in progress)",
