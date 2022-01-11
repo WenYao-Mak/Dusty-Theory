@@ -12,8 +12,6 @@ links:
    url: "makwenyao@gmail.com"
 output: 
   postcards::trestles
-description: |
-  Welcome to my blog! My passion is to use data science to understand the world. 
 ---
 
 ```{r setup, include=FALSE}
