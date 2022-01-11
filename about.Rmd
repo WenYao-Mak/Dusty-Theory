@@ -1,5 +1,17 @@
 ---
-title: "About this note"
+title: "WenYao Mak"
+image: "wy.png"
+links: 
+ - label: LinkedIn
+   url: "https://www.linkedin.com/in/mak-wen-yao-51148154/'
+ - label: Twitter 
+   url: "https://twitter.com/MakWY259" 
+ - label: Github
+   url: "https://github.com/WenYao-Mak"
+ - label: Email 
+   url: "makwenyao@gmail.com"
+output: 
+  postcards::trestles
 description: |
   Welcome to my blog! My passion is to use data science to understand the world. 
 ---
