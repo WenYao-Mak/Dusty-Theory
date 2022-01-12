@@ -2,7 +2,7 @@ name: "Dusty Theory"
 title: "Clinical Research with R"
 description: |
   Using R for reproducible clinical research analyses
-base_url: https://wenyao-mak.netlify.app/
+base_url: https://wenyao-mak.netlify.app
 output_dir: "docs"
 navbar:
   right:
