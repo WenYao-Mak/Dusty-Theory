@@ -16,20 +16,16 @@ output:
  
 ## Bio
 
-xxx
+I am a clinical researcher at the Malaysian Institute for Clinical Research. My research focuses on population pharmacokinetic-pharmacodynamics and statistical analyses for clinical data. I mainly work with people in phase II and/or phase III clinical trials. My work has been published on journals such the BMJ Open, and Peritoneal Dialysis International. 
 
 ## Education
 
-**Massachusetts Institute of Technology** | Cambridge, MA
+**Cardiff University School of Pharmacy** | Cardiff, Wales
 
-Ph.D. in Computer Science | September 2009 - May 2014
+Master of Pharmacy | September 2006 - July 2010
 
-**The University of California, Berkeley** | Berkeley, CA
+## Research / Collaboration Experience
 
-B.S. in Computer Science | September 2005 - May 2009
+**World Health Organization** | Solidarity and Solidarity Plus Trial | Investigator, Country Project Manager | April 2020 - Present
 
-## Experience
-
-**Google Brain** | Principal Investigator | January 2018 - Present
-
-**Netflix** | Research Scientist | June 2014 - December 2017
+**Ministry of Health** | HECTOR Study | Investigator | January 2020 - Present
