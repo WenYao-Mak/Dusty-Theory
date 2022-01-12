@@ -17,6 +17,7 @@ navbar:
       - text: "The Basic"
         href: the-basic.html
       - text: "Intermediate"
+      - text: "Advanced"
     - text: "For Fun"
       href: for_fun.html
     - text: "About"
