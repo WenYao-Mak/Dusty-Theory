@@ -1,5 +1,22 @@
 [
   {
+    "path": "posts/2022-01-12-the-basic/",
+    "title": "The basic",
+    "description": "A short description of the post.",
+    "author": [
+      {
+        "name": "WenYao, Mak",
+        "url": "https://www.linkedin.com/in/mak-wen-yao-51148154/"
+      }
+    ],
+    "date": "2022-01-12",
+    "categories": [],
+    "contents": "\r\nDistill is a publication format for scientific and technical writing, native to the web.\r\nLearn more about using Distill at https://rstudio.github.io/distill.\r\n\r\n\r\n\r\n",
+    "preview": {},
+    "last_modified": "2022-01-12T15:19:01+08:00",
+    "input_file": "the-basic.knit.md"
+  },
+  {
     "path": "posts/2021-08-19-competing-risk-approach-to-peritonitis-in-malaysia/",
     "title": "Competing risk approach to peritonitis in Malaysia",
     "description": "Survival analysis beyond Kaplan-Meier",
