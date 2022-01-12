@@ -1,23 +1,35 @@
 ---
 title: "WenYao Mak"
 image: "wy.png"
-links: 
- - label: LinkedIn
-   url: "https://www.linkedin.com/in/mak-wen-yao-51148154/'
- - label: Twitter 
-   url: "https://twitter.com/MakWY259" 
- - label: Github
-   url: "https://github.com/WenYao-Mak"
- - label: Email 
-   url: "makwenyao@gmail.com"
-output: 
+links:
+  - label: LinkedIn
+    url: "https://www.linkedin.com/in/mak-wen-yao-51148154/"
+  - label: Twitter
+    url: "https://twitter.com/MakWY259"
+  - label: GitHub
+    url: "https://github.com/WenYao-Mak"
+  - label: Email
+    url: "mailto:makwenyao@gmail.com"
+output:
   postcards::trestles
 ---
+ 
+## Bio
 
-## Bio 
+xxx
 
+## Education
 
-## Education 
+**Massachusetts Institute of Technology** | Cambridge, MA
 
+Ph.D. in Computer Science | September 2009 - May 2014
+
+**The University of California, Berkeley** | Berkeley, CA
+
+B.S. in Computer Science | September 2005 - May 2009
 
 ## Experience
+
+**Google Brain** | Principal Investigator | January 2018 - Present
+
+**Netflix** | Research Scientist | June 2014 - December 2017

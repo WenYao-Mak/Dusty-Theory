@@ -2,18 +2,17 @@
   "articles": [
     {
       "path": "about.html",
-      "title": "About this note",
-      "description": "Welcome to my blog! My passion is to use data science to understand the world. ",
+      "title": "WenYao Mak",
       "author": [],
-      "contents": "\r\n\r\n\r\n\r\n",
-      "last_modified": "2021-05-06T14:45:48+08:00"
+      "contents": "\r\n\r\n          \r\n          \r\n          My Blog\r\n          \r\n          \r\n          Home\r\n          About\r\n          ☰\r\n          \r\n          \r\n      \r\n        \r\n          \r\n            \r\n              \r\n            \r\n              WenYao Mak\r\n            \r\n            \r\n              \r\n                \r\n                    \r\n                      \r\n                        LinkedIn\r\n                      \r\n                    \r\n                  \r\n                                    \r\n                    \r\n                      \r\n                        Twitter\r\n                      \r\n                    \r\n                  \r\n                                    \r\n                    \r\n                      \r\n                        GitHub\r\n                      \r\n                    \r\n                  \r\n                                    \r\n                    \r\n                      \r\n                        Email\r\n                      \r\n                    \r\n                  \r\n                                  \r\n            \r\n          \r\n        \r\n        \r\n        \r\n          \r\n            \r\n            Bio\r\n            xxx\r\n            \r\n            \r\n            Education\r\n            Massachusetts Institute of Technology | Cambridge, MA\r\n            Ph.D. in Computer Science | September 2009 - May 2014\r\n            The University of California, Berkeley | Berkeley, CA\r\n            B.S. in Computer Science | September 2005 - May 2009\r\n            \r\n            \r\n            Experience\r\n            Google Brain | Principal Investigator | January 2018 - Present\r\n            Netflix | Research Scientist | June 2014 - December 2017\r\n            \r\n          \r\n        \r\n      \r\n    \r\n\r\n    \r\n      \r\n        \r\n          \r\n            \r\n              \r\n            \r\n              WenYao Mak\r\n            \r\n            \r\n              \r\n                \r\n                                    \r\n                    \r\n                      LinkedIn\r\n                    \r\n                  \r\n                                    \r\n                    \r\n                      Twitter\r\n                    \r\n                  \r\n                                    \r\n                    \r\n                      GitHub\r\n                    \r\n                  \r\n                                    \r\n                    \r\n                      Email\r\n                    \r\n                  \r\n                                  \r\n              \r\n            \r\n            \r\n              \r\n              Bio\r\n              xxx\r\n              \r\n              \r\n              Education\r\n              Massachusetts Institute of Technology | Cambridge, MA\r\n              Ph.D. in Computer Science | September 2009 - May 2014\r\n              The University of California, Berkeley | Berkeley, CA\r\n              B.S. in Computer Science | September 2005 - May 2009\r\n              \r\n              \r\n              Experience\r\n              Google Brain | Principal Investigator | January 2018 - Present\r\n              Netflix | Research Scientist | June 2014 - December 2017\r\n              \r\n            \r\n        \r\n      \r\n    \r\n\r\n    \r\n    \r\n    ",
+      "last_modified": "2022-01-12T09:31:05+08:00"
     },
     {
       "path": "index.html",
       "title": "My Notes",
       "author": [],
       "contents": "\r\n\r\n\r\n\r\n",
-      "last_modified": "2021-05-05T12:15:37+08:00"
+      "last_modified": "2021-08-19T13:55:34+08:00"
     }
   ],
   "collections": ["posts/posts.json"]
