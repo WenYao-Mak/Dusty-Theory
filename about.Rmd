@@ -16,7 +16,9 @@ output:
  
 ## Bio
 
-I am a clinical researcher at the Malaysian Institute for Clinical Research. My research focuses on population pharmacokinetic-pharmacodynamics and statistical analyses for clinical data. I mainly work with people in phase II and/or phase III clinical trials. My work has been published on journals such the BMJ Open, and Peritoneal Dialysis International. 
+I am a clinical researcher at the Malaysian Institute for Clinical Research. My research focuses on population pharmacokinetic-pharmacodynamics and statistical analyses for clinical data. I mainly work with people in phase II and/or phase III clinical trials. 
+
+My work are published on journals such the **BMJ Open**, and **Peritoneal Dialysis International**. 
 
 
 ## Education
