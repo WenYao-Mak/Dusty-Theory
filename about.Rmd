@@ -18,14 +18,20 @@ output:
 
 I am a clinical researcher at the Malaysian Institute for Clinical Research. My research focuses on population pharmacokinetic-pharmacodynamics and statistical analyses for clinical data. I mainly work with people in phase II and/or phase III clinical trials. My work has been published on journals such the BMJ Open, and Peritoneal Dialysis International. 
 
+
 ## Education
 
 **Cardiff University School of Pharmacy** | Cardiff, Wales
 
 Master of Pharmacy | September 2006 - July 2010
 
+
 ## Research / Collaboration Experience
 
-**World Health Organization** | Solidarity and Solidarity Plus Trial | Investigator, Country Project Manager | April 2020 - Present
+**World Health Organization** | Solidarity and Solidarity Plus Trial  
 
-**Ministry of Health** | HECTOR Study | Investigator | January 2020 - Present
+Investigator, Country Project Manager | April 2020 - Present
+
+**Ministry of Health** | HECTOR Study 
+
+Investigator | January 2020 - Present
