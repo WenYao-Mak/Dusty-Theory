@@ -14,8 +14,8 @@ navbar:
       href: pharmacometrics.html
     - text: "Survival Analysis"
       menu: 
-       - text: "The Basic"
-         href: posts/survival-analysis.html
+       - text: The Basic
+         href: survival-analysis.html
     - text: "For Fun"
       href: for_fun.html
     - text: "About"
