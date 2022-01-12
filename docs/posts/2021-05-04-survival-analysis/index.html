@@ -86,10 +86,11 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </style>
 
   <!--radix_placeholder_meta_tags-->
-<title>My Blog: Survival Analysis</title>
+<title>Clinical Research with R: Survival Analysis</title>
 
 <meta property="description" itemprop="description" content="This is a note to myself on survival analysis. You are welcome to use the information."/>
 
+<link rel="canonical" href="https://wenyao-mak.netlify.app/posts/2021-05-04-survival-analysis/"/>
 
 <!--  https://schema.org/Article -->
 <meta property="article:published" itemprop="datePublished" content="2021-05-04"/>
@@ -97,22 +98,36 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <meta name="article:author" content="WenYao, Mak"/>
 
 <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-<meta property="og:title" content="My Blog: Survival Analysis"/>
+<meta property="og:title" content="Clinical Research with R: Survival Analysis"/>
 <meta property="og:type" content="article"/>
 <meta property="og:description" content="This is a note to myself on survival analysis. You are welcome to use the information."/>
+<meta property="og:url" content="https://wenyao-mak.netlify.app/posts/2021-05-04-survival-analysis/"/>
+<meta property="og:image" content="https://wenyao-mak.netlify.app/posts/2021-05-04-survival-analysis/survival-analysis_files/figure-html5/unnamed-chunk-1-1.png"/>
+<meta property="og:image:width" content="1248"/>
+<meta property="og:image:height" content="768"/>
 <meta property="og:locale" content="en_US"/>
-<meta property="og:site_name" content="My Blog"/>
+<meta property="og:site_name" content="Clinical Research with R"/>
 
 <!--  https://dev.twitter.com/cards/types/summary -->
-<meta property="twitter:card" content="summary"/>
-<meta property="twitter:title" content="My Blog: Survival Analysis"/>
+<meta property="twitter:card" content="summary_large_image"/>
+<meta property="twitter:title" content="Clinical Research with R: Survival Analysis"/>
 <meta property="twitter:description" content="This is a note to myself on survival analysis. You are welcome to use the information."/>
+<meta property="twitter:url" content="https://wenyao-mak.netlify.app/posts/2021-05-04-survival-analysis/"/>
+<meta property="twitter:image" content="https://wenyao-mak.netlify.app/posts/2021-05-04-survival-analysis/survival-analysis_files/figure-html5/unnamed-chunk-1-1.png"/>
+<meta property="twitter:image:width" content="1248"/>
+<meta property="twitter:image:height" content="768"/>
 
+<!--  https://scholar.google.com/intl/en/scholar/inclusion.html#indexing -->
+<meta name="citation_title" content="Clinical Research with R: Survival Analysis"/>
+<meta name="citation_fulltext_html_url" content="https://wenyao-mak.netlify.app/posts/2021-05-04-survival-analysis/"/>
+<meta name="citation_online_date" content="2021/05/04"/>
+<meta name="citation_publication_date" content="2021/05/04"/>
+<meta name="citation_author" content="WenYao, Mak"/>
 <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
 <script type="text/json" id="radix-rmarkdown-metadata">
-{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","theme"]}},"value":[{"type":"character","attributes":{},"value":["Survival Analysis"]},{"type":"character","attributes":{},"value":["This is a note to myself on survival analysis. You are welcome to use the information."]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["WenYao, Mak"]},{"type":"character","attributes":{},"value":["https://www.linkedin.com/in/mak-wen-yao-51148154/"]}]}]},{"type":"character","attributes":{},"value":["05-04-2021"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained","toc","toc_float","toc_depth","number_sections"]}},"value":[{"type":"logical","attributes":{},"value":[false]},{"type":"logical","attributes":{},"value":[true]},{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[6]},{"type":"logical","attributes":{},"value":[true]}]}]},{"type":"character","attributes":{},"value":["theme.css"]}]}
+{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","author","date","output","theme","citation_url","canonical_url"]}},"value":[{"type":"character","attributes":{},"value":["Survival Analysis"]},{"type":"character","attributes":{},"value":["This is a note to myself on survival analysis. You are welcome to use the information."]},{"type":"list","attributes":{},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["name","url"]}},"value":[{"type":"character","attributes":{},"value":["WenYao, Mak"]},{"type":"character","attributes":{},"value":["https://www.linkedin.com/in/mak-wen-yao-51148154/"]}]}]},{"type":"character","attributes":{},"value":["05-04-2021"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["distill::distill_article"]}},"value":[{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["self_contained","toc","toc_float","toc_depth","number_sections"]}},"value":[{"type":"logical","attributes":{},"value":[false]},{"type":"logical","attributes":{},"value":[true]},{"type":"logical","attributes":{},"value":[true]},{"type":"integer","attributes":{},"value":[6]},{"type":"logical","attributes":{},"value":[true]}]}]},{"type":"character","attributes":{},"value":["theme.css"]},{"type":"character","attributes":{},"value":["https://wenyao-mak.netlify.app/posts/2021-05-04-survival-analysis/"]},{"type":"character","attributes":{},"value":["https://wenyao-mak.netlify.app/posts/2021-05-04-survival-analysis/"]}]}
 </script>
 <!--/radix_placeholder_rmarkdown_metadata-->
   
@@ -2070,12 +2085,19 @@ document.addEventListener('DOMContentLoaded', function() {
 <header class="header header--fixed" role="banner">
 <nav class="distill-site-nav distill-site-header">
 <div class="nav-left">
-<a href="../../index.html" class="title">My Blog</a>
+<a href="../../index.html" class="title">Clinical Research with R</a>
 <input id="distill-search" class="nav-search hidden" type="text" placeholder="Search..."/>
 </div>
 <div class="nav-right">
 <a href="../../index.html">Home</a>
+<a href="../../clinical_trial.html">Clinical Trial</a>
+<a href="../../pharmacometrics.html">Pharmacometrics</a>
+<a href="../../survival_analysis.html">Survival Analysis</a>
+<a href="../../for_fun.html">For Fun</a>
 <a href="../../about.html">About</a>
+<a href="../../index.xml">
+<i class="fa fa-rss" aria-hidden="true"></i>
+</a>
 <a href="javascript:void(0);" class="nav-toggle">&#9776;</a>
 </div>
 </nav>
@@ -2148,7 +2170,18 @@ sex=2 54     18   1353     632      NA</code></pre>
 <!--radix_placeholder_site_after_body-->
 <!--/radix_placeholder_site_after_body-->
 <!--radix_placeholder_appendices-->
-<div class="appendix-bottom"></div>
+<div class="appendix-bottom">
+  <h3 id="citation">Citation</h3>
+  <p>For attribution, please cite this work as</p>
+  <pre class="citation-appendix short">Mak (2021, May 4). Clinical Research with R: Survival Analysis. Retrieved from https://wenyao-mak.netlify.app/posts/2021-05-04-survival-analysis/</pre>
+  <p>BibTeX citation</p>
+  <pre class="citation-appendix long">@misc{mak2021survival,
+  author = {Mak, WenYao,},
+  title = {Clinical Research with R: Survival Analysis},
+  url = {https://wenyao-mak.netlify.app/posts/2021-05-04-survival-analysis/},
+  year = {2021}
+}</pre>
+</div>
 <!--/radix_placeholder_appendices-->
 <!--radix_placeholder_navigation_after_body-->
 <!--/radix_placeholder_navigation_after_body-->

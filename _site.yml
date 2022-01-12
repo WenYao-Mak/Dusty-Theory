@@ -1,13 +1,24 @@
 name: "Dusty Theory"
-title: "My Blog"
+title: "Clinical Research with R"
 description: |
-  My Blog
+  Using R for reproducible clinical research analyses
+base_url: https://wenyao-mak.netlify.app/
 output_dir: "docs"
 navbar:
   right:
     - text: "Home"
       href: index.html
+    - text: "Clinical Trial"
+      href: clinical_trial.html
+    - text: "Pharmacometrics"
+      href: pharmacometrics.html
+    - text: "Survival Analysis"
+      href: survival_analysis.html
+    - text: "For Fun"
+      href: for_fun.html
     - text: "About"
       href: about.html
+    - icon: fa fa-rss
+      href: index.xml
 output: distill::distill_article
 
