@@ -15,7 +15,7 @@ navbar:
     - text: "Survival Analysis"
       menu: 
        - text: "The Basic"
-         href: survival-analysis.html
+         href: posts/survival-analysis.html
     - text: "For Fun"
       href: for_fun.html
     - text: "About"
