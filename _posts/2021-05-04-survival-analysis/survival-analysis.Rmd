@@ -6,6 +6,8 @@ author:
   - name: WenYao, Mak 
     url: https://www.linkedin.com/in/mak-wen-yao-51148154/
 date: 05-04-2021
+categories: 
+  - survival analysis
 output:
   distill::distill_article:
     self_contained: false
