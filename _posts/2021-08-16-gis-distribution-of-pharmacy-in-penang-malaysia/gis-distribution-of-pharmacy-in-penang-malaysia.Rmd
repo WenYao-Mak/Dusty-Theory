@@ -15,7 +15,7 @@ output:
     toc_float: true
     toc_depth: 6
     number_sections: true
-draft: true
+draft: false
 ---
 
 ```{r setup, include=FALSE}

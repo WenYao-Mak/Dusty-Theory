@@ -19,8 +19,9 @@ navbar:
       - text: "Intermediate"
       - text: "Advanced"
     - text: "For Fun"
-      menu: "GIS Analysis"
-      href: https://wenyao-mak.netlify.app/posts/2021-08-16-gis-distribution-of-pharmacy-in-penang-malaysia/
+      menu: 
+      - text: "GIS Analysis"
+        href: https://wenyao-mak.netlify.app/posts/2021-08-16-gis-distribution-of-pharmacy-in-penang-malaysia/
     - text: "About"
       href: about.html
     - icon: fa fa-rss
