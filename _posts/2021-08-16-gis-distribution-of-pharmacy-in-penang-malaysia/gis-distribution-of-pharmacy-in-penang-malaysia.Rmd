@@ -15,7 +15,7 @@ output:
     toc_float: true
     toc_depth: 6
     number_sections: true
-theme: theme.css
+draft: true
 ---
 
 ```{r setup, include=FALSE}
@@ -38,19 +38,19 @@ Information of all registered pharmacies (retail or wholesale) is manually colle
 
 As the file size is quite small, the `.csv`{.R} sheet is read via the `read.csv()`{.R} wrapper function. The data frame is given a name "PG" via
 
-```{r data, eval=TRUE, cache=FALSE, warning=FALSE, message=FALSE, echo=TRUE}
+```{r data, eval=FALSE, cache=FALSE, warning=FALSE, message=FALSE, echo=TRUE}
 PG <- read.csv("PGpharm.csv")
 ```
 
 Displaying the column names suggests that the information is sufficient for what I want to do here. (Note: the column names were written in Malay where 'Nama.Premis'='Premise Name' and 'Alamat.Premis'='Premise Address') 
 
-```{r, eval=TRUE, cache=FALSE, warning=FALSE, message=FALSE, echo=TRUE}
+```{r, eval=FALSE, cache=FALSE, warning=FALSE, message=FALSE, echo=TRUE}
 colnames(PG)
 ```
 
 Since the data is published by an official government portal, there should be no missing data but it doesn't hurt to check. 
 
-```{r, eval=TRUE, cache=FALSE, warning=FALSE, message=FALSE, echo=TRUE}
+```{r, eval=FALSE, cache=FALSE, warning=FALSE, message=FALSE, echo=TRUE}
 which(is.na(PG$Nama.Premis))
 which(is.na(PG$Alamat.Premis))
 ```
@@ -71,7 +71,7 @@ The following codes are used to convert addresses to latitude and longitude. I u
 library(ggmap)
 
 lat_longs3 <- PG %>%
-  geocode(Alamat.Premis, method="cascade", cascade_order=c("osm","google"), lat=latitude, long=longitude)
+  geocode(PG$Alamat.Premis, method="cascade", cascade_order=c("osm","google"), lat=latitude, long=longitude)
 ```
 
 Sometimes the geocoding process will fail to produce any coordinates and subsequent mapping cannot proceed. In this case, the coordinates will be manually identified and filled. 
@@ -98,11 +98,12 @@ To map these pharmacies, the package `mapview()` will be needed. I opted to use 
 library(mapview)
 library(RColorBrewer)
 
-pg_pharm <-mapview(pg_sf, zcol=c("Nama.Premis"), legend=FALSE, layer.name = "Retail & Wholesale Pharmacies in Penang", col.regions=brewer.pal(9, "Reds"))
+pg_pharm <-mapview(pg_sf, zcol=c("Nama.Premis"), legend=FALSE, layer.name = "Retail & Wholesale Pharmacies in Penang")
 ```
 
 The distribution of all retail & wholesale pharmacies in Penang state is shown below. Each colour dot represents a pharmacy. 
 
 ```{r, eval=TRUE, cache=FALSE, warning=FALSE, message=FALSE, echo=FALSE, tidy=TRUE, tidy.opts=list(width.cutoff=60)}
 pg_pharm
+
 ```
