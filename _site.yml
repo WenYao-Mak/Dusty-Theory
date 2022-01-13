@@ -15,7 +15,7 @@ navbar:
     - text: "Survival Analysis"
       menu: 
       - text: "The Basic"
-        href: https://wenyao-mak.netlify.app/posts/2022-01-12-the-basic/
+        href: https://wenyao-mak.netlify.app/posts/2021-05-04-survival-analysis/
       - text: "Intermediate"
       - text: "Advanced"
     - text: "For Fun"
