@@ -1,22 +1,60 @@
 ---
-title: "The basic"
+title: "Simulating Survival Data"
 description: |
-  A short description of the post.
+  A short description on simulating survival-type data using the `sim.survdata` function
 author:
   - name: WenYao, Mak
     url: https://www.linkedin.com/in/mak-wen-yao-51148154/
 date: 01-12-2022
+categories: 
+  - survival analysis
 output:
   distill::distill_article:
     self_contained: false
-draft: true
+    toc: true
+    toc_float: true
+    toc_depth: 6
+    number_sections: true
+theme: theme.css
+draft: false
 ---
-
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
+
+
+library(coxed)
 ```
 
-This page is still under construction
+The main reference materials [(1](https://www.cambridge.org/core/journals/political-science-research-and-methods/article/abs/simulating-duration-data-for-the-cox-model/1945D7548766E76FB31C6C833976822E) and [2)](https://cran.r-project.org/web/packages/coxed/vignettes/simulating_survival_data.html) come from Jeffrey Harden and Jonathan Kropko. 
 
+## Quick Guide 
+
+The `sim.survdata` function simulates survival data (the duration) without specifying a specific distribution for the baseline hazard function, to match the inherent advantage of the Cox method. 
+
+To simulate a simple survival dataset, use the `sim.survdata()` function with the `num.data.frames.` argument set to 1. 
+
+```{r, eval=FALSE, results=FALSE, echo=TRUE}
+
+simdata <- sim.survdata(N=1000, T=100, num.data.frames=1)
+
+```
+
+Other features can be changed too, including the number of observation (`N` argument), maximum survival time (`T` argument), covariates number (`xvars` argument), and proportion of right censored observations (`censor` argument). 
+
+```{r, echo=TRUE, eval=TRUE, results=TRUE}
+
+simdata <- sim.survdata(N=700, T=250, xvars=5, censor=.2, num.data.frames = 1)
+
+```
+
+To combine existing datasets with simulated duration and censor, used the `X` argument. Three variables (`postel`, `rgovm` and `pgovno`) from the included `martinvanberg` dataset were used.
+
+```{r, echo=TRUE, }
+
+mv.data <- dplyr::select(martinvanberg, postel, rgovm, pgovno)
+simdata <- sim.survdata(T=100, X=mv.data, num.data.frames = 1)
+
+head(simdata$data, 6)
+```
 

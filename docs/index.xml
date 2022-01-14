@@ -7,7 +7,16 @@
     <description>Using R for reproducible clinical research analyses
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Thu, 19 Aug 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 11 Jan 2022 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Simulating Survival Data</title>
+      <dc:creator>WenYao, Mak</dc:creator>
+      <link>https://wenyao-mak.netlify.app/posts/2022-01-12-the-basic</link>
+      <description>A short description on simulating survival-type data using the `sim.survdata` function</description>
+      <category>survival analysis</category>
+      <guid>https://wenyao-mak.netlify.app/posts/2022-01-12-the-basic</guid>
+      <pubDate>Tue, 11 Jan 2022 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>Competing risk approach to peritonitis in Malaysia</title>
       <dc:creator>WenYao, Mak</dc:creator>
