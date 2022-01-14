@@ -10,6 +10,8 @@ links:
     url: "https://github.com/WenYao-Mak"
   - label: Email
     url: "mailto:makwenyao@gmail.com"
+base_url: https://wenyao-mak.netlify.app/
+favicon: images/favicon.ico
 output:
   postcards::trestles
 ---
