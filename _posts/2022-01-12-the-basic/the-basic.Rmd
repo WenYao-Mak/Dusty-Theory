@@ -8,6 +8,7 @@ author:
 date: 01-12-2022
 categories: 
   - survival analysis
+theme: css/theme.css
 output:
   distill::distill_article:
     toc: true

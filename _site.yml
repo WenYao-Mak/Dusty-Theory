@@ -5,7 +5,7 @@ description: |
 base_url: https://wenyao-mak.netlify.app
 output_dir: "docs"
 google_analytics: "G-35S8TCLMJ9"
-theme: theme.css
+theme: css/theme.css
 navbar:
   search: true
   right:

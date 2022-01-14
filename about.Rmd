@@ -12,6 +12,7 @@ links:
     url: "mailto:makwenyao@gmail.com"
 base_url: https://wenyao-mak.netlify.app/
 favicon: images/favicon.ico
+theme: css/theme.css
 output:
   postcards::trestles
 ---
