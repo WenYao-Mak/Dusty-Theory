@@ -2108,7 +2108,23 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   /*-- Additional custom styles --*/
   /* Add any additional CSS rules below                      */
   </style>
-  <style type="text/css">
+  <style type="text/css">@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+  :root {
+    --font-body:   inter,-apple-system,BlinkMacSystemFont,roboto,segoe ui,Helvetica,Arial,sans-serif;
+    --font-header: "Fira Sans Condensed",Tahoma,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    --font-mono:   SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono",monospace;
+
+    --color-background:   #EAE9EA;
+    --color-primary:      #74a08a;
+    --color-primary-dark: #2F4238;
+    --color-secondary:    #8a74a0;
+    --color-tertiary:     #a08a74;
+    --color-text:         #172a3a;
+    --color-white:        #FFFFFF;
+  }
+
   /* base variables */
 
   /* Edit the CSS properties in this file to create a custom
@@ -2169,9 +2185,9 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   /* These properties only apply to Distill sites and blogs  */
 
   .distill-site-header {
-    --title-size:       20px;
+    --title-size:       18px;
     --text-color:       white;
-    --text-size:        20px;
+    --text-size:        18px;
     --hover-color:      white;
     --bkgd-color:       #0F2E3D;
     font-weight: light;
@@ -2351,8 +2367,20 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   <script src="site_libs/webcomponents-2.0.0/webcomponents.js"></script>
   <script src="site_libs/distill-2.2.21/template.v2.js"></script>
   <!--radix_placeholder_site_in_header-->
-  <script type="text/javascript" cookie-consent="tracking" async src="https://www.googletagmanager.com/gtag/js?id=G-35S8TCLMJ9"></script>
-  <script type="text/javascript" cookie-consent="tracking">
+  <script type="text/javascript" src="https://www.cookieconsent.com/releases/3.1.0/cookie-consent.js"></script>
+  <script type="text/javascript">
+  document.addEventListener('DOMContentLoaded', function () {
+  cookieconsent.run({
+  'notice_banner_type':'simple',
+  'consent_type': 'express',
+  'palette': 'light',
+  'language': 'en',
+  'website_name': 'Dusty Theory',
+  'cookies_policy_url': 'url',
+  'change_preferences_selector':'#CookiePreferences'
+  });});</script>
+  <script type="text/plain" cookie-consent="tracking" async src="https://www.googletagmanager.com/gtag/js?id=G-35S8TCLMJ9"></script>
+  <script type="text/plain" cookie-consent="tracking">
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());

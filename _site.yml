@@ -4,7 +4,10 @@ description: |
   Using R for reproducible clinical research analyses
 base_url: https://wenyao-mak.netlify.app
 output_dir: "docs"
+google_analytics: "G-35S8TCLMJ9"
+theme: theme.css
 navbar:
+  search: true
   right:
     - text: "Home"
       href: index.html
@@ -29,5 +32,9 @@ navbar:
     - icon: fa fa-rss
       href: index.xml
 output: distill::distill_article
-google_analytics: "G-35S8TCLMJ9"
-theme: theme.css
+cookie_consent:
+  style: simple
+  type: express
+  palette: light
+  lang: en
+  cookies_policy: url
