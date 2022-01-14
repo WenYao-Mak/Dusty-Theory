@@ -22,7 +22,6 @@ navbar:
       - text: "---"
       - text: "Basic"
         href: https://wenyao-mak.netlify.app/posts/2021-05-04-survival-analysis/
-      - text: "---"
       - text: "Intermediate"
       - text: "Advanced"
     - text: "For Fun"
