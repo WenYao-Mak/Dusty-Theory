@@ -21,6 +21,7 @@ navbar:
         href: https://wenyao-mak.netlify.app/posts/2022-01-12-the-basic/
       - text: "---"
       - text: "Basic"
+        href: https://wenyao-mak.netlify.app/posts/2021-05-04-survival-analysis/
       - text: "Intermediate"
       - text: "Advanced"
     - text: "For Fun"
