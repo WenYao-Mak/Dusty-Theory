@@ -10,12 +10,10 @@ categories:
   - GIS analysis
 output:
   distill::distill_article:
-    self_contained: false
     toc: true
     toc_float: true
     toc_depth: 6
     number_sections: true
-draft: false
 ---
 
 ```{r setup, include=FALSE}

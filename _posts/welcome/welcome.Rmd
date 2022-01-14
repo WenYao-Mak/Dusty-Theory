@@ -7,8 +7,7 @@ author:
     url: https://www.linkedin.com/in/mak-wen-yao-51148154/
 date: 04-17-2021
 output:
-  distill::distill_article:
-    self_contained: false
+  distill::distill_article
 ---
 
 ```{r setup, include=FALSE}

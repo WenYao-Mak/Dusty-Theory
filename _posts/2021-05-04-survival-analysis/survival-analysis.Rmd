@@ -10,7 +10,6 @@ categories:
   - survival analysis
 output:
   distill::distill_article:
-    self_contained: false
     toc: true
     toc_float: true
     toc_depth: 6
