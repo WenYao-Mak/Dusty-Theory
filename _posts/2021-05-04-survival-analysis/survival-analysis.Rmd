@@ -90,3 +90,13 @@ ggsurvplot(fit,
 
 ```
 
+## Cox Regression 
+
+Cox regression using the `coxph` function 
+
+```{r, cache=TRUE, echo=TRUE, results=TRUE}
+
+coxph(Surv(y, failed)~postel, data = dat) %>%
+  gtsummary::tbl_regression(exp = TRUE)
+
+```
