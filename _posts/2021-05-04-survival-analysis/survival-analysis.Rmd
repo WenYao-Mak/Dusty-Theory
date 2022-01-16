@@ -1,7 +1,7 @@
 ---
 title: "Survival Analysis"
 description: |
-  This is a note to myself on survival analysis. You are welcome to use the information. 
+  A comprehensive discussion on the various techniques used for survival analysis. 
 author:
   - name: WenYao, Mak 
     url: https://www.linkedin.com/in/mak-wen-yao-51148154/
@@ -22,11 +22,66 @@ output:
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-# Comprehensive Survival Analysis in R
+# Motivation to write
 
-The article introduces different analysis methods for time-to-event data, and how to conduct these analyses using R. 
+The article introduces different analysis methods for time-to-event data, and how to conduct these analyses using R. The main motivation of writing this article is to use it as a reference for my future self - to explain why I did what I have done. 
 
-My current research interest revolves around peritoneal dialysis and related issues, so examples will be illustrated using data in this field.
+A key inspiration of my work comes from the writing of [Emily Zabor](https://www.emilyzabor.com/tutorials/survival_analysis_in_r_tutorial.html) and her excellent tutorial on survival analysis. Her writing is highly recommended for those who wish to learn more about this technique. 
+
+# TL;DR 
+The dataset should look like this
+
+```{r, eval=TRUE, cache=TRUE}
+library(coxed)
+mv.data <- dplyr::select(martinvanberg, postel, rgovm, pgovno)
+simdata <- sim.survdata(T=100, X=mv.data, num.data.frames = 1)
+```
+
+![lorem ipsum](images/survival_dataset.png)
+
+The `failed` column contains **both** the event and censor information. 
+
+## Create survival objects 
+
+Use the `Surv` function from the `survival` package. 
+
+```{r, cache=TRUE, echo=TRUE, results=FALSE}
+
+library(survival)
+surv_obj <- Surv(simdata$data$y, simdata$data$failed)
+
+```
+
+For **censored subject**, the survival time will have a `+` sign. 
+
+```{r, cache=TRUE, echo=TRUE, results=TRUE}
+head(surv_obj)
+```
+
+## Kaplan-Meier approach 
+
+Use the `survfit`function for KM analysis and log-rank test for between groups comparison.  
+
+```{r, cache=TRUE, echo=TRUE, results=TRUE}
+
+survdiff(Surv(simdata$data$y, simdata$data$failed)~postel, data = simdata$data)
+
+```
+
+and `ggsurvplot` from `survminer` to create plots. 
+
+```{r, cache=TRUE, echo=TRUE, results=TRUE}
+
+library(survminer)
+
+dat <- as.data.frame(simdata$data)
+
+ggsurvplot(
+  fit = survfit(Surv(y, failed)~postel, data = dat),
+  xlab = "Days", 
+  ylab = "Overall survival probability")
+
+```
 
 # Part 1: Survival vs Hazard Functions (Probabilities) 
 

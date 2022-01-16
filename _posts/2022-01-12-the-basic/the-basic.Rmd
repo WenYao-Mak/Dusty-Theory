@@ -26,7 +26,7 @@ library(coxed)
 
 The main reference materials [(1](https://www.cambridge.org/core/journals/political-science-research-and-methods/article/abs/simulating-duration-data-for-the-cox-model/1945D7548766E76FB31C6C833976822E) and [2)](https://cran.r-project.org/web/packages/coxed/vignettes/simulating_survival_data.html) come from Jeffrey Harden and Jonathan Kropko. 
 
-## Quick Guide 
+## TL;DR
 
 The `sim.survdata` function simulates survival data (the duration) without specifying a specific distribution for the baseline hazard function, to match the inherent advantage of the Cox method. 
 
@@ -55,4 +55,6 @@ simdata <- sim.survdata(T=100, X=mv.data, num.data.frames = 1)
 
 head(simdata$data, 6)
 ```
+
+## Example 
 
