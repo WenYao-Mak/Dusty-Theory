@@ -31,13 +31,12 @@ A key inspiration of my work comes from the writing of [Emily Zabor](https://www
 # TL;DR 
 The dataset should look like this
 
-```{r, eval=TRUE, cache=TRUE}
+```{r, eval=TRUE, cache=TRUE, echo=TRUE}
 library(coxed)
 mv.data <- dplyr::select(martinvanberg, postel, rgovm, pgovno)
 simdata <- sim.survdata(T=100, X=mv.data, num.data.frames = 1)
 ```
-
-![lorem ipsum](images/survival_dataset.png)
+![An example dataset](images/survival_dataset.png)
 
 The `failed` column contains **both** the event and censor information. 
 
