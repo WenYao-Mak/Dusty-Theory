@@ -1,0 +1,21 @@
+---
+title: "R notes"
+description: |
+  A collection of notes on R functions to remind myself what I did, and why I did it.
+author:
+  - name: WenYao, Mak
+    url: https://www.linkedin.com/in/mak-wen-yao-51148154/
+date: 2022-01-17
+categories: 
+  - R notes
+theme: css/theme.css
+output:
+  distill::distill_article:
+    toc: true
+    toc_float: true
+    toc_depth: 6
+    number_sections: true
+---
+
+
+1. [{tabset} in distill website]()

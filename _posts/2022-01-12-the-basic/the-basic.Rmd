@@ -56,5 +56,4 @@ simdata <- sim.survdata(T=100, X=mv.data, num.data.frames = 1)
 head(simdata$data, 6)
 ```
 
-## Example 
 

@@ -30,6 +30,8 @@ navbar:
       menu: 
       - text: "GIS Analysis"
         href: https://wenyao-mak.netlify.app/posts/2021-08-16-gis-distribution-of-pharmacy-in-penang-malaysia/
+      - text: "R Notes"
+        href: r_notes.html
     - icon: fa fa-rss
       href: index.xml
 output: distill::distill_article

@@ -1,0 +1,113 @@
+---
+title: "{.tabset} in distill?"
+description: |
+  A short description of the post.
+author:
+  - name: WenYao, Mak
+    url: https://www.linkedin.com/in/mak-wen-yao-51148154/
+date: 2022-01-17
+categories: 
+  - R notes
+theme: css/theme.css
+output:
+  distill::distill_article:
+    toc: true
+    toc_float: true
+    toc_depth: 6
+    number_sections: true
+    code_folding: show code
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+xaringanExtra::use_panelset()
+```
+
+# Why `.tabset` and why it fails? 
+
+Interactive articles are more powerful to convey information to readers. Better visualisation helps readers to digest the content faster. 
+
+It is easy to include tabs in `html` article. The `.tabset` function can be included at a heading (say level 2) and all the following subheading (i.e. level 3) will be arranged in tabbed panels. However, this approach **does not work with distill**. This is confirmed in a 2018 post [here](https://github.com/rstudio/distill/issues/11) but the authors did mention they wish to use [jqueryUI tabsets](https://api.jqueryui.com/tabs/) in the future. 
+
+*Note: This information is accurate as of 17th January 2022*
+
+# Workaround 
+
+[**Garrik Aden-Buie**](https://github.com/gadenbuie) suggested the `panelset` function from `xaringanExtra` to circumvent this issue, but the approach requires the fenced-div syntax as followed: 
+
+```{r, echo=TRUE, eval=FALSE, class.source = 'fold-show'}
+xaringanExtra::use_panelset()
+
+# ::::: {.panelset}
+#
+# ::: {.panel}
+#
+# # Tab One {.panel-name}
+#
+# Content for tab one here
+# 
+# ### Sub heading one
+#
+# **Psst: see tab two!** 
+#
+# :::
+#
+# ::: {.panel}
+#
+# ## Tab Two {.panel-name}
+#
+# This is how I feel when I try to code
+#
+# ![](https://media.giphy.com/media/EJsTKyvaYzvm8/giphy.gif)
+#
+# :::
+#
+# ::: {.panel}
+#
+# ## Tab Three {.panel-name}
+#
+# Content for tab three here
+#
+# :::
+#
+# :::::
+```
+
+## End results
+
+The end results look like this: 
+
+::::: {.panelset}
+
+::: {.panel}
+
+## Tab One {.panel-name}
+
+Content for tab one here
+
+### Sub heading one
+
+**Psst: see tab two!** 
+
+:::
+
+::: {.panel}
+
+## Tab Two {.panel-name}
+
+
+This is how I feel when I try to code
+
+![](https://media.giphy.com/media/EJsTKyvaYzvm8/giphy.gif)
+
+:::
+
+::: {.panel}
+
+## Tab Three {.panel-name}
+
+Content for tab three here
+
+:::
+
+:::::

@@ -28,7 +28,7 @@ The article introduces different analysis methods for time-to-event data, and ho
 
 A key inspiration of my work comes from the writing of [Emily Zabor](https://www.emilyzabor.com/tutorials/survival_analysis_in_r_tutorial.html) and her excellent tutorial on survival analysis. Her writing is highly recommended for those who wish to learn more about this technique. 
 
-# TL;DR 
+# TL;DR
 The dataset should look like this
 
 ```{r, eval=TRUE, cache=TRUE, echo=TRUE}
@@ -57,7 +57,7 @@ For **censored subject**, the survival time will have a `+` sign.
 head(surv_obj)
 ```
 
-## Kaplan-Meier approach 
+## Kaplan-Meier approach {.tabset}
 
 Use the `survfit`function for KM analysis and log-rank test for between groups comparison.  
 
@@ -99,3 +99,4 @@ coxph(Surv(y, failed)~postel, data = dat) %>%
   gtsummary::tbl_regression(exp = TRUE)
 
 ```
+
