@@ -1,24 +1,5 @@
 [
   {
-    "path": "posts/2022-01-17-rnotes/",
-    "title": "R notes",
-    "description": "A collection of notes on R functions to remind myself what I did, and why I did it.",
-    "author": [
-      {
-        "name": "WenYao, Mak",
-        "url": "https://www.linkedin.com/in/mak-wen-yao-51148154/"
-      }
-    ],
-    "date": "2022-01-17",
-    "categories": [
-      "R notes"
-    ],
-    "contents": "\r\n{tabset} in distill website\r\n\r\n\r\n\r\n",
-    "preview": {},
-    "last_modified": "2022-01-17T14:38:43+08:00",
-    "input_file": {}
-  },
-  {
     "path": "posts/2022-01-17-tabset/",
     "title": "{.tabset} in distill?",
     "description": "A short description of the post.",
@@ -36,6 +17,25 @@
     "preview": {},
     "last_modified": "2022-01-17T16:26:31+08:00",
     "input_file": "tabset.knit.md"
+  },
+  {
+    "path": "posts/2022-01-17-rnotes/",
+    "title": "R notes",
+    "description": "A collection of notes on R functions to remind myself what I did, and why I did it.",
+    "author": [
+      {
+        "name": "WenYao, Mak",
+        "url": "https://www.linkedin.com/in/mak-wen-yao-51148154/"
+      }
+    ],
+    "date": "2022-01-17",
+    "categories": [
+      "R notes"
+    ],
+    "contents": "\r\n{tabset} in distill website\r\n\r\n\r\n\r\n",
+    "preview": {},
+    "last_modified": "2022-01-17T16:28:58+08:00",
+    "input_file": "rnotes.knit.md"
   },
   {
     "path": "posts/2022-01-12-the-basic/",
