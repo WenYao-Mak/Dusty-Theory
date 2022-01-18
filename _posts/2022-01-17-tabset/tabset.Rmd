@@ -1,7 +1,7 @@
 ---
 title: "{.tabset} in distill?"
 description: |
-  A short description of the post.
+  When tabset fails, do this to create tab panels in distill articles
 author:
   - name: WenYao, Mak
     url: https://www.linkedin.com/in/mak-wen-yao-51148154/
