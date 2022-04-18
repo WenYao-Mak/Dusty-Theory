@@ -13,19 +13,19 @@ navbar:
       href: index.html
     - text: "About"
       href: about.html
-    - text: "Clinical Trial"
+    - text: "Clinical Research"
       menu:
       - text: "Statistics"
         href: https://wenyao-mak.netlify.app/posts/2022-04-17-choosing-the-right-statistical-test/
-      - text: "Survival Analysis"
-        menu: 
-        - text: "Simulation"
-          href: https://wenyao-mak.netlify.app/posts/2022-01-12-the-basic/
-        - text: "---"
-        - text: "Basic"
-          href: https://wenyao-mak.netlify.app/posts/2021-05-04-survival-analysis/
-        - text: "Intermediate"
-        - text: "Advanced"
+    - text: "Survival Analysis"
+      menu: 
+      - text: "Simulation"
+        href: https://wenyao-mak.netlify.app/posts/2022-01-12-the-basic/
+      - text: "---"
+      - text: "Basic"
+        href: https://wenyao-mak.netlify.app/posts/2021-05-04-survival-analysis/
+      - text: "Intermediate"
+      - text: "Advanced"
     - text: "For Fun"
       menu: 
       - text: "GIS Analysis"
