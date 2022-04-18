@@ -7,7 +7,15 @@
     <description>Using R for reproducible clinical research analyses
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Mon, 17 Jan 2022 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 16 Apr 2022 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Choosing the right statistical test</title>
+      <dc:creator>WenYao, Mak</dc:creator>
+      <link>https://wenyao-mak.netlify.app/posts/2022-04-17-choosing-the-right-statistical-test</link>
+      <description>How to choose a statistical test for different types of clinical trial data</description>
+      <guid>https://wenyao-mak.netlify.app/posts/2022-04-17-choosing-the-right-statistical-test</guid>
+      <pubDate>Sat, 16 Apr 2022 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>R notes</title>
       <dc:creator>WenYao, Mak</dc:creator>

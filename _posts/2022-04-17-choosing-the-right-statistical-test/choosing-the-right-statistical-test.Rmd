@@ -1,0 +1,156 @@
+---
+title: "Choosing the right statistical test"
+description: |
+  How to choose a statistical test for different types of clinical trial data
+author:
+  - name: WenYao, Mak
+    url: https://www.linkedin.com/in/mak-wen-yao-51148154/
+date: 2022-04-17
+header-includes: 
+  - \usepackage{wrapfig}
+output:
+  distill::distill_article:
+    toc: true
+    toc_float: true
+    toc_depth: 6
+    number_sections: true
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+# Motivation to write 
+
+Using the right statistical test - and using it in the right way - is critical for clinical trials. The choice of a test depends on many factors (i.e hypothesis, study design, sample size etc) but the focus on the blog post is on selecting a statistical test. 
+
+The blog will be a reference for my work but I hope it will be useful for anyone else who is involved in clinical research. 
+
+The main reference materials come from the [Handbook of Biological Statistics](http://www.biostathandbook.com/index.html) by John H. McDonald and [Statistics at Square One](https://www.bmj.com/about-bmj/resources-readers/publications/statistics-square-one)
+
+# TL;DR
+
+For paired *dependent variable* (data not independent):
+
+\vspace{-5truemm}
+
+```{r paired, eval=TRUE, message=FALSE, warning=FALSE, fig.cap=" Statistical tests for paired observations", out.extra='trim={0cm 0cm 0cm 0cm},clip'}
+library(DiagrammeR)
+grViz("
+digraph paired_test {
+graph [overlap = true]
+node [shape = box, 
+      fontsize = 8,
+      fontname = Helvetica, 
+      height   = 0.4,
+      color    = grey]
+a[label='@@1']
+b[label='@@2']
+c[label='@@3']
+d[label='@@4']
+e[label='@@5']
+f[label='@@6']
+g[label='@@7']
+h[label='@@8']
+
+edge[color=grey, 
+     arrowhead=none]
+a->b->c
+a->d->g
+a->e->g
+a->f->h
+}
+[1]: 'Paired \\n Dependent Variable'
+[2]: 'Nominal'
+[3]: 'McNemars test'
+[4]: 'Ordinal'
+[5]: 'Quantitative:\\n discrete or non-normal'
+[6]: 'Quantitative:\\n normal'
+[7]: 'Wilcoxon'
+[8]: 'Paired t-test'
+", height=300)
+```
+
+For *independent variables* that are also *continuous*: ([Ref: Statistics at Square One](https://www.bmj.com/about-bmj/resources-readers/publications/statistics-square-one))
+
+```{r indcont, eval=TRUE, message=FALSE, warning=FALSE, fig.cap="Statistical tests for independent continous variables" }
+grViz("
+digraph continuous_DV {
+graph [overlap = true]
+node [shape = box, 
+      fontsize = 8,
+      fontname = Helvetica, 
+      height   = 0.4,
+      color    = grey]
+a[label='@@1']
+b[label='@@2']
+c[label='@@3']
+d[label='@@4']
+e[label='@@5']
+f[label='@@6']
+g[label='@@7']
+
+edge[color=grey, 
+     arrowhead=none]
+a->b [fontsize=8,label='Yes']
+a->g [fontsize=8,label='No']
+b->c [fontsize=8,label='Yes']
+b->d [fontsize=8,label='No']
+c->e [fontsize=8,label='Yes']
+c->f [fontsize=8,label='No']
+}
+[1]: 'Data \\n is continuous?'
+[2]: 'Data is \\n normally distributed?'
+[3]: 'Equal variances?'
+[4]: 'Mann-Whitney \\n U test'
+[5]: '2-sample \\n t-test with \\n pooled variance'
+[6]: '2-sample \\n t-test with \\n unequal variance'
+[7]: 'Refer next\\n figure'
+", height=500)
+```
+
+Lastly, for non-continuous (*discrete* or *categorical*): 
+
+```{r discrete, eval=TRUE, message=FALSE, warning=FALSE, fig.cap="Statistical tests for independent discrete/categorical variables" }
+grViz("
+digraph discrete_DV {
+graph [overlap = true]
+node [shape = box, 
+      fontsize = 8,
+      fontname = Helvetica, 
+      height   = 0.4,
+      color    = grey]
+a[label='@@1']
+b[label='@@2']
+c[label='@@3']
+d[label='@@4']
+e[label='@@5']
+f[label='@@6']
+g[label='@@7']
+h[label='@@8']
+i[label='@@9']
+
+edge[color=grey, 
+     arrowhead=none]
+a->b [fontsize=8,label='No']
+b->c [fontsize=8,label='No']
+b->f [fontsize=8,label='Yes']
+c->d [fontsize=8,label='No']
+d->h [fontsize=8,label='Yes']
+d->i [fontsize=8,label='No']
+c->e [fontsize=8,label='Yes']
+e->h [fontsize=8,label='Yes']
+e->g [fontsize=8,label='No']
+}
+[1]: 'Data \\n is continuous?'
+[2]: 'Data is \\n ordinal?'
+[3]: 'More than 2 categories?'
+[4]: 'All expected \\n frequencies >5?'
+[5]: 'Most expected \\n frequencies >5?'
+[6]: 'Chi-squared \\n test for trend'
+[7]: 'Analyse with care \\n consider to pool \\n categories'
+[8]: 'Chi-square \\n test'
+[9]: 'Fisher exact \\n or Chi-square \\n with Yates correction'
+", height=600)
+```
