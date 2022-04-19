@@ -40,7 +40,7 @@
       <description>A collection of notes on R functions to remind myself what I did, and why I did it.</description>
       <category>R notes</category>
       <guid>https://wenyao-mak.netlify.app/posts/2022-01-17-rnotes</guid>
-      <pubDate>Sun, 16 Jan 2022 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 17 Jan 2022 00:00:00 +0000</pubDate>
     </item>
     <item>
       <title>Simulating Survival Data</title>
@@ -85,7 +85,7 @@
       <link>https://wenyao-mak.netlify.app/posts/welcome</link>
       <description>Welcome to my blog! I hope the information can help you in your journey in Data Science.</description>
       <guid>https://wenyao-mak.netlify.app/posts/welcome</guid>
-      <pubDate>Sat, 17 Apr 2021 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 16 Apr 2021 00:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>
