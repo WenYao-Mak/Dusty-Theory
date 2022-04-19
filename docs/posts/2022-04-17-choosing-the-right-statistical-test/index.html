@@ -2427,28 +2427,7 @@ gtag('config', 'G-35S8TCLMJ9');
 <i class="fas fa-home" aria-hidden="true"></i>
 </a>
 <a href="../../index.html">Blog</a>
-<div class="nav-dropdown">
-<button class="nav-dropbtn">
-Tutorial
- 
-<span class="down-arrow">&#x25BE;</span>
-</button>
-<div class="nav-dropdown-content">
-<a href="https://wenyao-mak.netlify.app/posts/2022-04-17-choosing-the-right-statistical-test/">Statistics</a>
-</div>
-</div>
-<div class="nav-dropdown">
-<button class="nav-dropbtn">
-Survival Analysis
- 
-<span class="down-arrow">&#x25BE;</span>
-</button>
-<div class="nav-dropdown-content">
-<a href="https://wenyao-mak.netlify.app/posts/2022-01-12-the-basic/">Simulation</a>
-<hr/>
-<a href="https://wenyao-mak.netlify.app/posts/2021-05-04-survival-analysis">Basic</a>
-</div>
-</div>
+<span class="nav-dropdown-header">Tutorial</span>
 <a href="../../r_notes.html">R Notes</a>
 <a href="../../index.xml">
 <i class="fa fa-rss" aria-hidden="true"></i>
@@ -2492,8 +2471,8 @@ Survival Analysis
 <p>For paired <em>dependent variable</em> (data not independent):</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="figure"><span style="display:block;" id="fig:paired"></span>
-<div id="htmlwidget-5bd195c5f82b119dc122" style="width:624px;height:300px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-5bd195c5f82b119dc122">{"x":{"diagram":"\ndigraph paired_test {\ngraph [overlap = true]\nnode [shape = box, \n      fontsize = 8,\n      fontname = Helvetica, \n      height   = 0.4,\n      color    = grey]\na[label=\"Paired \n Dependent Variable\"]\nb[label=\"Nominal\"]\nc[label=\"McNemars test\"]\nd[label=\"Ordinal\"]\ne[label=\"Quantitative:\n discrete or non-normal\"]\nf[label=\"Quantitative:\n normal\"]\ng[label=\"Wilcoxon\"]\nh[label=\"Paired t-test\"]\n\nedge[color=grey, \n     arrowhead=none]\na->b->c\na->d->g\na->e->g\na->f->h\n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-ceeb41fd6c263aa6ce18" style="width:624px;height:300px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-ceeb41fd6c263aa6ce18">{"x":{"diagram":"\ndigraph paired_test {\ngraph [overlap = true]\nnode [shape = box, \n      fontsize = 8,\n      fontname = Helvetica, \n      height   = 0.4,\n      color    = grey]\na[label=\"Paired \n Dependent Variable\"]\nb[label=\"Nominal\"]\nc[label=\"McNemars test\"]\nd[label=\"Ordinal\"]\ne[label=\"Quantitative:\n discrete or non-normal\"]\nf[label=\"Quantitative:\n normal\"]\ng[label=\"Wilcoxon\"]\nh[label=\"Paired t-test\"]\n\nedge[color=grey, \n     arrowhead=none]\na->b->c\na->d->g\na->e->g\na->f->h\n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 <p class="caption">
 Figure 1:  Statistical tests for paired observations
 </p>
@@ -2502,8 +2481,8 @@ Figure 1:  Statistical tests for paired observations
 <p>For <em>independent variables</em> that are also <em>continuous</em>: (<a href="https://www.bmj.com/about-bmj/resources-readers/publications/statistics-square-one">Ref: Statistics at Square One</a>)</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="figure"><span style="display:block;" id="fig:indcont"></span>
-<div id="htmlwidget-1a22446ff17c0570ed4c" style="width:624px;height:500px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-1a22446ff17c0570ed4c">{"x":{"diagram":"\ndigraph continuous_DV {\ngraph [overlap = true]\nnode [shape = box, \n      fontsize = 8,\n      fontname = Helvetica, \n      height   = 0.4,\n      color    = grey]\na[label=\"Data \n is continuous?\"]\nb[label=\"Data is \n normally distributed?\"]\nc[label=\"Equal variances?\"]\nd[label=\"Mann-Whitney \n U test\"]\ne[label=\"2-sample \n t-test with \n pooled variance\"]\nf[label=\"2-sample \n t-test with \n unequal variance\"]\ng[label=\"Refer next\n figure\"]\n\nedge[color=grey, \n     arrowhead=none]\na->b [fontsize=8,label=\"Yes\"]\na->g [fontsize=8,label=\"No\"]\nb->c [fontsize=8,label=\"Yes\"]\nb->d [fontsize=8,label=\"No\"]\nc->e [fontsize=8,label=\"Yes\"]\nc->f [fontsize=8,label=\"No\"]\n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-adb2502090b2b68e72f3" style="width:624px;height:500px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-adb2502090b2b68e72f3">{"x":{"diagram":"\ndigraph continuous_DV {\ngraph [overlap = true]\nnode [shape = box, \n      fontsize = 8,\n      fontname = Helvetica, \n      height   = 0.4,\n      color    = grey]\na[label=\"Data \n is continuous?\"]\nb[label=\"Data is \n normally distributed?\"]\nc[label=\"Equal variances?\"]\nd[label=\"Mann-Whitney \n U test\"]\ne[label=\"2-sample \n t-test with \n pooled variance\"]\nf[label=\"2-sample \n t-test with \n unequal variance\"]\ng[label=\"Refer next\n figure\"]\n\nedge[color=grey, \n     arrowhead=none]\na->b [fontsize=8,label=\"Yes\"]\na->g [fontsize=8,label=\"No\"]\nb->c [fontsize=8,label=\"Yes\"]\nb->d [fontsize=8,label=\"No\"]\nc->e [fontsize=8,label=\"Yes\"]\nc->f [fontsize=8,label=\"No\"]\n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 <p class="caption">
 Figure 2: Statistical tests for independent continous variables
 </p>
@@ -2512,8 +2491,8 @@ Figure 2: Statistical tests for independent continous variables
 <p>Lastly, for non-continuous (<em>discrete</em> or <em>categorical</em>):</p>
 <div class="layout-chunk" data-layout="l-body">
 <div class="figure"><span style="display:block;" id="fig:discrete"></span>
-<div id="htmlwidget-ee2d882b9b55fb13c54e" style="width:624px;height:600px;" class="grViz html-widget"></div>
-<script type="application/json" data-for="htmlwidget-ee2d882b9b55fb13c54e">{"x":{"diagram":"\ndigraph discrete_DV {\ngraph [overlap = true]\nnode [shape = box, \n      fontsize = 8,\n      fontname = Helvetica, \n      height   = 0.4,\n      color    = grey]\na[label=\"Data \n is continuous?\"]\nb[label=\"Data is \n ordinal?\"]\nc[label=\"More than 2 categories?\"]\nd[label=\"All expected \n frequencies >5?\"]\ne[label=\"Most expected \n frequencies >5?\"]\nf[label=\"Chi-squared \n test for trend\"]\ng[label=\"Analyse with care \n consider to pool \n categories\"]\nh[label=\"Chi-square \n test\"]\ni[label=\"Fisher exact \n or Chi-square \n with Yates correction\"]\n\nedge[color=grey, \n     arrowhead=none]\na->b [fontsize=8,label=\"No\"]\nb->c [fontsize=8,label=\"No\"]\nb->f [fontsize=8,label=\"Yes\"]\nc->d [fontsize=8,label=\"No\"]\nd->h [fontsize=8,label=\"Yes\"]\nd->i [fontsize=8,label=\"No\"]\nc->e [fontsize=8,label=\"Yes\"]\ne->h [fontsize=8,label=\"Yes\"]\ne->g [fontsize=8,label=\"No\"]\n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-a4542bad7504afa2b092" style="width:624px;height:600px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-a4542bad7504afa2b092">{"x":{"diagram":"\ndigraph discrete_DV {\ngraph [overlap = true]\nnode [shape = box, \n      fontsize = 8,\n      fontname = Helvetica, \n      height   = 0.4,\n      color    = grey]\na[label=\"Data \n is continuous?\"]\nb[label=\"Data is \n ordinal?\"]\nc[label=\"More than 2 categories?\"]\nd[label=\"All expected \n frequencies >5?\"]\ne[label=\"Most expected \n frequencies >5?\"]\nf[label=\"Chi-squared \n test for trend\"]\ng[label=\"Analyse with care \n consider to pool \n categories\"]\nh[label=\"Chi-square \n test\"]\ni[label=\"Fisher exact \n or Chi-square \n with Yates correction\"]\n\nedge[color=grey, \n     arrowhead=none]\na->b [fontsize=8,label=\"No\"]\nb->c [fontsize=8,label=\"No\"]\nb->f [fontsize=8,label=\"Yes\"]\nc->d [fontsize=8,label=\"No\"]\nd->h [fontsize=8,label=\"Yes\"]\nd->i [fontsize=8,label=\"No\"]\nc->e [fontsize=8,label=\"Yes\"]\ne->h [fontsize=8,label=\"Yes\"]\ne->g [fontsize=8,label=\"No\"]\n}","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 <p class="caption">
 Figure 3: Statistical tests for independent discrete/categorical variables
 </p>
