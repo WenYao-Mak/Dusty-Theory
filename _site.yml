@@ -1,5 +1,5 @@
 name: "Dusty Theory"
-title: "Clinical Research with R"
+title: "WenYao Mak"
 description: |
   Using R for reproducible clinical research analyses
 base_url: https://wenyao-mak.netlify.app
@@ -9,29 +9,15 @@ theme: css/theme.css
 navbar:
   search: true
   right:
-    - text: "Home"
-      href: index.html
     - text: "About"
+      icon: fas fa-home
       href: about.html
-    - text: "Clinical Research"
-      menu:
-      - text: "Statistics"
-        href: https://wenyao-mak.netlify.app/posts/2022-04-17-choosing-the-right-statistical-test/
-    - text: "Survival Analysis"
-      menu: 
-      - text: "Simulation"
-        href: https://wenyao-mak.netlify.app/posts/2022-01-12-the-basic/
-      - text: "---"
-      - text: "Basic"
-        href: https://wenyao-mak.netlify.app/posts/2021-05-04-survival-analysis/
-      - text: "Intermediate"
-      - text: "Advanced"
-    - text: "For Fun"
-      menu: 
-      - text: "GIS Analysis"
-        href: https://wenyao-mak.netlify.app/posts/2021-08-16-gis-distribution-of-pharmacy-in-penang-malaysia/
-      - text: "R Notes"
-        href: r_notes.html
+    - text: "Blog"
+      href: index.html
+    - text: "Tutorial"
+      href: 
+    - text: "R Notes"
+      href: r_notes.html
     - icon: fa fa-rss
       href: index.xml
 output: distill::distill_article

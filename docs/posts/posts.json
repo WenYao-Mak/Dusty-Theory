@@ -1,5 +1,22 @@
 [
   {
+    "path": "posts/2022-04-20-tutorial/",
+    "title": "Tutorial",
+    "description": "Tutorials for common analytics used in clinical research",
+    "author": [
+      {
+        "name": "WenYao, Mak",
+        "url": "https://www.linkedin.com/in/mak-wen-yao-51148154/"
+      }
+    ],
+    "date": "2022-04-20",
+    "categories": [],
+    "contents": "\r\nTutorials\r\nBiostatistics: a guide to choosing the right statistical test for all clinical data\r\nSurvival analysis: a detail guide to running survival analysis (or time-to-event analysis) with R\r\n\r\n\r\n\r\n",
+    "preview": {},
+    "last_modified": "2022-04-20T00:48:25+08:00",
+    "input_file": "tutorial.knit.md"
+  },
+  {
     "path": "posts/2022-04-17-choosing-the-right-statistical-test/",
     "title": "Choosing the right statistical test",
     "description": "How to choose a statistical test for different types of clinical trial data",
@@ -13,7 +30,7 @@
     "categories": [],
     "contents": "\r\n\r\nContents\r\nMotivation to write\r\nTL;DR\r\n\r\nMotivation to write\r\nUsing the right statistical test - and using it in the right way - is critical for clinical trials. The choice of a test depends on many factors (i.e hypothesis, study design, sample size etc) but the focus on the blog post is on selecting a statistical test.\r\nThe blog will be a reference for my work but I hope it will be useful for anyone else who is involved in clinical research.\r\nThe main reference materials come from the Handbook of Biological Statistics by John H. McDonald and Statistics at Square One\r\nTL;DR\r\nFor paired dependent variable (data not independent):\r\n\r\n\r\n\r\n{\"x\":{\"diagram\":\"\\ndigraph paired_test {\\ngraph [overlap = true]\\nnode [shape = box, \\n      fontsize = 8,\\n      fontname = Helvetica, \\n      height   = 0.4,\\n      color    = grey]\\na[label=\\\"Paired \\n Dependent Variable\\\"]\\nb[label=\\\"Nominal\\\"]\\nc[label=\\\"McNemars test\\\"]\\nd[label=\\\"Ordinal\\\"]\\ne[label=\\\"Quantitative:\\n discrete or non-normal\\\"]\\nf[label=\\\"Quantitative:\\n normal\\\"]\\ng[label=\\\"Wilcoxon\\\"]\\nh[label=\\\"Paired t-test\\\"]\\n\\nedge[color=grey, \\n     arrowhead=none]\\na->b->c\\na->d->g\\na->e->g\\na->f->h\\n}\",\"config\":{\"engine\":\"dot\",\"options\":null}},\"evals\":[],\"jsHooks\":[]}\r\nFigure 1:  Statistical tests for paired observations\r\n\r\n\r\n\r\nFor independent variables that are also continuous: (Ref: Statistics at Square One)\r\n\r\n\r\n\r\n{\"x\":{\"diagram\":\"\\ndigraph continuous_DV {\\ngraph [overlap = true]\\nnode [shape = box, \\n      fontsize = 8,\\n      fontname = Helvetica, \\n      height   = 0.4,\\n      color    = grey]\\na[label=\\\"Data \\n is continuous?\\\"]\\nb[label=\\\"Data is \\n normally distributed?\\\"]\\nc[label=\\\"Equal variances?\\\"]\\nd[label=\\\"Mann-Whitney \\n U test\\\"]\\ne[label=\\\"2-sample \\n t-test with \\n pooled variance\\\"]\\nf[label=\\\"2-sample \\n t-test with \\n unequal variance\\\"]\\ng[label=\\\"Refer next\\n figure\\\"]\\n\\nedge[color=grey, \\n     arrowhead=none]\\na->b [fontsize=8,label=\\\"Yes\\\"]\\na->g [fontsize=8,label=\\\"No\\\"]\\nb->c [fontsize=8,label=\\\"Yes\\\"]\\nb->d [fontsize=8,label=\\\"No\\\"]\\nc->e [fontsize=8,label=\\\"Yes\\\"]\\nc->f [fontsize=8,label=\\\"No\\\"]\\n}\",\"config\":{\"engine\":\"dot\",\"options\":null}},\"evals\":[],\"jsHooks\":[]}\r\nFigure 2: Statistical tests for independent continous variables\r\n\r\n\r\n\r\nLastly, for non-continuous (discrete or categorical):\r\n\r\n\r\n\r\n{\"x\":{\"diagram\":\"\\ndigraph discrete_DV {\\ngraph [overlap = true]\\nnode [shape = box, \\n      fontsize = 8,\\n      fontname = Helvetica, \\n      height   = 0.4,\\n      color    = grey]\\na[label=\\\"Data \\n is continuous?\\\"]\\nb[label=\\\"Data is \\n ordinal?\\\"]\\nc[label=\\\"More than 2 categories?\\\"]\\nd[label=\\\"All expected \\n frequencies >5?\\\"]\\ne[label=\\\"Most expected \\n frequencies >5?\\\"]\\nf[label=\\\"Chi-squared \\n test for trend\\\"]\\ng[label=\\\"Analyse with care \\n consider to pool \\n categories\\\"]\\nh[label=\\\"Chi-square \\n test\\\"]\\ni[label=\\\"Fisher exact \\n or Chi-square \\n with Yates correction\\\"]\\n\\nedge[color=grey, \\n     arrowhead=none]\\na->b [fontsize=8,label=\\\"No\\\"]\\nb->c [fontsize=8,label=\\\"No\\\"]\\nb->f [fontsize=8,label=\\\"Yes\\\"]\\nc->d [fontsize=8,label=\\\"No\\\"]\\nd->h [fontsize=8,label=\\\"Yes\\\"]\\nd->i [fontsize=8,label=\\\"No\\\"]\\nc->e [fontsize=8,label=\\\"Yes\\\"]\\ne->h [fontsize=8,label=\\\"Yes\\\"]\\ne->g [fontsize=8,label=\\\"No\\\"]\\n}\",\"config\":{\"engine\":\"dot\",\"options\":null}},\"evals\":[],\"jsHooks\":[]}\r\nFigure 3: Statistical tests for independent discrete/categorical variables\r\n\r\n\r\n\r\n\r\n\r\n\r\n",
     "preview": {},
-    "last_modified": "2022-04-19T01:46:51+08:00",
+    "last_modified": "2022-04-20T00:26:36+08:00",
     "input_file": "choosing-the-right-statistical-test.knit.md"
   },
   {
@@ -144,7 +161,7 @@
     "categories": [],
     "contents": "\r\n\r\n\r\n\r\n",
     "preview": {},
-    "last_modified": "2022-01-18T11:26:25+08:00",
-    "input_file": {}
+    "last_modified": "2022-04-20T00:31:41+08:00",
+    "input_file": "welcome.knit.md"
   }
 ]
