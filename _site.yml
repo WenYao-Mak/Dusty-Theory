@@ -15,7 +15,7 @@ navbar:
     - text: "Blog"
       href: index.html
     - text: "Tutorial"
-      href: 
+      href: https://wenyao-mak.netlify.app/posts/2022-04-20-tutorial/
     - text: "R Notes"
       href: r_notes.html
     - icon: fa fa-rss
