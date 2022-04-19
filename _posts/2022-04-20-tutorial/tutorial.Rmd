@@ -1,0 +1,25 @@
+---
+title: "Tutorial"
+description: |
+  Tutorials for common analytics used in clinical research 
+author:
+  - name: WenYao, Mak
+    url: https://www.linkedin.com/in/mak-wen-yao-51148154/
+date: 2022-04-20
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+# Tutorials 
+
+[Biostatistics](https://wenyao-mak.netlify.app/posts/2022-04-17-choosing-the-right-statistical-test/): a guide to choosing the right statistical test for all clinical data 
+
+[Survival analysis](https://wenyao-mak.netlify.app/posts/2021-05-04-survival-analysis/): a detail guide to running survival analysis (or time-to-event analysis) with R
+
+
