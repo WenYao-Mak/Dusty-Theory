@@ -6,6 +6,8 @@ author:
   - name: WenYao, Mak
     url: https://www.linkedin.com/in/mak-wen-yao-51148154/
 date: 2022-04-17
+categories: 
+  - Statistics
 header-includes: 
   - \usepackage{wrapfig}
 output:
